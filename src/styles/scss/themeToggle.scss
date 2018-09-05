@@ -1,0 +1,19 @@
+.themeToggle {
+  display: none;
+  background: $theme-toggle;
+  border: none;
+  border-radius: 3px;
+  padding: .5em;
+  font-weight: $medium;
+  color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  @include minq('desktop') {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}

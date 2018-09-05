@@ -1,0 +1,60 @@
+.content {
+  
+  &-thumbs {
+    display: grid;
+    grid-template-columns: 1 1fr;
+    gap: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    //grid-template-rows: repeat(auto-fill, 210px);
+    @include minq('tablet') {
+      grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+      padding-left: 0px;
+    }
+  }
+
+  &-detail {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+
+    @include minq('tablet') {
+      padding-right: 30px;
+    }
+
+    .tablet-only {
+      display: none;
+
+      @include minq('tablet') {
+        display: table-cell
+      }
+    }
+
+    thead th {
+      text-align: left;
+      color: $file-thumb-name;
+      font-size: 14px;
+      font-weight: $medium;
+      padding-bottom: 1.5em;
+    }
+
+    tbody tr {
+      cursor: pointer;
+
+      &:hover {
+        .detail__filename {
+          color: #007be8;
+
+          .check {
+            display: inline-block;
+          }
+        }
+      }
+
+      td{
+        border-top: 1px solid #ededed;
+        padding: .6em 0;
+      }
+    }
+  }
+}

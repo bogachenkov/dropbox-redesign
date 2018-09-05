@@ -1,0 +1,30 @@
+.storage {
+  display: none;
+
+  @include minq('tablet') {
+    display: block;
+  }
+
+  &__legend {
+    text-transform: uppercase;
+    font-weight: $semi-bold;
+    color: $menu-item;
+    text-align: center;
+  }
+  
+  &__level {
+    height: 12px;
+    background-color: $menu-storage-empty;
+  }
+
+  &__used {
+    width: 0;
+    height: 100%;
+    transition: width 1s;
+    background-color: $menu-storage-full;
+
+    &.percentage-60 {
+      width: 60%;
+    }
+  }
+}

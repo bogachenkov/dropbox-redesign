@@ -1,0 +1,46 @@
+@import 'normalize';
+@import 'variables';
+
+@import 'animations';
+@import 'check';
+@import 'content';
+@import 'detail';
+@import 'grid';
+@import 'header';
+@import 'hTools';
+@import 'init-loader';
+@import 'menu';
+@import 'options';
+@import 'panel';
+@import 'search';
+@import 'storage';
+@import 'themeToggle';
+@import 'thumb';
+@import 'upgrade';
+@import 'user';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll {
+  height: calc(100vh - 93px - 80px);
+}
+
+.content {
+  padding-bottom: 130px !important;
+  touch-action: none;
+}
+
+.menu-scroll {
+  height: calc(100vh - 80px);
+}

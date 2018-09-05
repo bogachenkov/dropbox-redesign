@@ -1,0 +1,23 @@
+.animations {
+
+  &-appear {
+    opacity: 0.01;
+
+    &.animations-appear-active {
+      opacity: 1;
+      transition: opacity .4s ease-in;
+    }
+
+  }
+
+  &-leave {
+    opacity: 1;
+    transform: translateX(0);
+
+    &.animations-leave-active {
+      opacity: 0;
+      transform: translateX(-200px);
+      transition: all .3s ease-in;
+    }
+  }
+}

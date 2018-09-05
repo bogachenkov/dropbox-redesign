@@ -1,0 +1,14 @@
+.check {
+  cursor: pointer;
+  display: none;
+
+  &.active {
+    display: inline-block;
+    .check-bg {
+      fill: #a0d468;
+    }
+    .check-icon {
+      fill: #ffffff;
+    }
+  }
+}

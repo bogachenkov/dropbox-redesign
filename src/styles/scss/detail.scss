@@ -1,0 +1,39 @@
+.detail {
+
+  &__image {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  &__filename {
+    display: flex;
+    align-items: center;
+    color: $file-thumb-name;
+    font-size: 14px;
+    font-weight: $medium;
+    position: relative;
+    padding-left: 30px;
+    
+    .check {
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    &_cell {
+      width: 50%;
+    }
+  }
+
+  &__date,
+  &__size {
+    color: $file-thumb-info;
+    font-size: 14px;
+    margin: 0;
+    display: none;
+
+    @include minq('tablet') {
+      display: table-cell;
+    }
+  }
+}

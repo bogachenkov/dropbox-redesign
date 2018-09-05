@@ -1,0 +1,51 @@
+// Colors
+
+$header-dark-logo-bg: #007be8;
+$header-light-logo-bg: #ffffff;
+$header-dark-bg: #3f4044;
+$header-light-bg: #ffffff;
+$header-text-secondary: #919191;
+$header-dark-text: #ffffff;
+$header-light-text: #3f4044;
+
+$search-dark-bg: #505155;
+$search-light-bg: #e3e3e3;
+$search-dark-color: #929292;
+$search-light-color: #afafaf;
+
+$menu-bg: #f4f4f4;
+$menu-section: #c1c1c1;
+$menu-item: #8a8a8a;
+$menu-item-hover: #ebebeb;
+$menu-storage-empty: #d5d5d5;
+$menu-storage-full: #007be8;
+
+$panel-text: #8a8a8a;
+
+$file-thumb-name: #505155;
+$file-thumb-info: #9d9d9d;
+
+$theme-toggle: #007be8;
+
+// Fonts
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// Breakpoints
+$breakpoints: (
+        "phone":        25em,
+        "tablet":       48em,
+        "laptop":       64em,
+        "desktop":      90em,
+        "4k":           160em
+);
+
+@mixin minq($width) {
+  $width: map_get($breakpoints, $width);
+  @media screen and (min-width: $width){
+    @content;
+  }
+}

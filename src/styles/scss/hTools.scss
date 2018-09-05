@@ -1,0 +1,22 @@
+.hTools {
+  display: none;
+
+  @include minq('laptop') {
+    display: block;
+  }
+
+  &__settings,
+  &__notifications {
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s;
+    
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  &__notifications {
+    margin-left: 30px;
+  }
+}

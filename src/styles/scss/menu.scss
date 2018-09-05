@@ -1,0 +1,69 @@
+.menu {
+  height: 100%;
+  background-color: $menu-bg;
+  padding: 31px 20px 42px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 13px;
+    color: $menu-section;
+    font-weight: $bold;
+    margin: 36px 0 1em 0;
+    cursor: pointer;
+    display: none;
+
+    @include minq('tablet') {
+      display: block;
+    }
+
+    &:first-of-type {
+      margin: 0 0 1em;
+    }
+  }
+
+  &__section {
+    transition: all .4s;
+    overflow: hidden;
+
+    &:nth-of-type(2) {
+      display: none;
+
+      @include minq('tablet') {
+        display: block;
+      }
+    }
+
+    @include minq('tablet') {
+      max-height: 0;
+    }
+
+    &.active {
+      max-height: 220px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    font-size: 14px;
+    color: $menu-item;
+    font-weight: $medium;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 11px;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: 1;
+
+    img {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      background-color: $menu-item-hover;
+    }
+  }
+}

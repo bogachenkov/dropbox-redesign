@@ -1,0 +1,73 @@
+.panel {
+  padding: 21px 30px 21px 30px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+
+  @include minq('tablet') {
+    padding: 21px 30px 21px 0;
+  }
+
+  &__item {
+    display: none;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    color: $panel-text;
+    font-weight: $medium;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .3s;
+
+    @include minq('laptop') {
+      display: inline-flex;
+    }
+
+    &:hover {
+      color: #3f4044;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.trash {
+      display: inline-flex;
+    }
+  }
+
+
+  &__views {
+    margin-left: auto;
+
+    @include minq('laptop') {
+
+    }
+  }
+
+  &__view {
+    margin-left: 20px;
+    cursor: pointer;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__selected-count {
+    margin: 0 0 0 40px;
+    color: #3f4044;
+    font-size: 14px;
+    display: none;
+
+    @include minq('tablet') {
+      display: block;
+    }
+  }
+}

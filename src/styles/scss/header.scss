@@ -1,0 +1,66 @@
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  justify-content: space-between;
+
+  @include minq('tablet') {
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    height: 80px;
+    width: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex: 0 0 80px;
+
+    @include minq('tablet') {
+      width: 240px;
+      flex: 0 0 240px;
+      margin-right: 30px;
+    }
+  }
+
+  &__right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include minq('tablet') {
+      margin-left: auto;
+    }
+  }
+
+  &.dark {
+    background-color: $header-dark-bg;
+    color: $header-dark-text;
+
+    .header__logo {
+      background-color: $header-dark-logo-bg;
+    }
+
+    .search {
+      background-color: $search-dark-bg;
+      color: $search-dark-color;
+    }
+  }
+
+  &.light {
+    background-color: $header-light-bg;
+    color: $header-light-text;
+    border-bottom: 1px solid #ededed;
+
+    .header__logo {
+      background-color: $header-light-logo-bg;
+    }
+
+    .search {
+      background-color: $search-light-bg;
+      color: $search-light-color;
+    }
+  }
+}

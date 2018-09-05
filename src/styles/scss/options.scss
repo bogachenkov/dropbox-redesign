@@ -1,0 +1,67 @@
+.options {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  &.absolute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.relative {
+    display: inline-block;
+    position: relative;
+  }
+
+  &:hover {
+    background-color: #f4f4f4;
+
+    .options__dropdown {
+      display: block;
+    }
+  }
+
+  img {
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 15px 7px 7px;
+
+    @include minq('tablet') {
+      padding: 7px;
+    }
+  }
+
+  &__dropdown {
+    text-align: left;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    display: none;
+    transition: all .5s;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0;
+    padding: 15px 12px;
+    width: 192px;
+  
+    li {
+      cursor: pointer;
+      color: #999999;
+      font-size: 13px;
+      line-height: 2;
+      display: inline-flex;
+      align-items: center;
+  
+      &:hover {
+        color: $file-thumb-name;
+      }
+  
+      img {
+        margin-right: 14px;
+      }
+    }
+  }
+}

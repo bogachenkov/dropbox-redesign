@@ -1,0 +1,42 @@
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  
+  @include minq('laptop') {
+    margin-right: 30px;
+  }
+
+  @include minq('desktop') {
+    margin-right: 75px;
+  }
+
+  &__avatar {
+    @include minq('tablet') {
+      margin-right: 17px;
+    }
+  }
+
+  &__name {
+    font-weight: $bold;
+    font-size: 14px;
+    margin: 0;
+    display: none;
+
+    @include minq('tablet') {
+      display: block;
+    }
+  }
+
+  &__type {
+    color: $header-text-secondary;
+    font-size: 12px;
+    margin: .5em 0 0 0;
+    display: none;
+
+    @include minq('tablet') {
+      display: block;
+    }
+  }
+}

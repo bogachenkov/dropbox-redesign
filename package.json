@@ -1,0 +1,27 @@
+{
+  "name": "dropbox-redesign",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://bogachenkov.github.io/dropbox-redesign",
+  "dependencies": {
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.5",
+    "react-scrollbar": "^0.5.4",
+    "react-transition-group": "^1.2.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "npm run sass:build && react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass": "sass --watch src/styles/scss/index.scss:src/styles/css/index.css",
+    "sass:build": "sass --update src/styles/scss/index.scss:src/styles/css/index.css"
+  }
+}

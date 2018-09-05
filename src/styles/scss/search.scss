@@ -1,0 +1,27 @@
+.search {
+  width: 170px;
+  margin-right: 10px;
+  height: 45px;
+  border: none;
+  border-radius: 22px;
+  outline: none;
+  padding: 0 35px 0 15px;
+  font-weight: $medium;
+  font-style: italic;
+
+  @include minq('desktop') {
+    width: 244px;
+    margin: 0;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__icon {
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+}

@@ -1,0 +1,31 @@
+.upgrade {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  @include minq('laptop') {
+    display: flex;
+    margin-right: 25px;
+  }
+
+  @include minq('desktop') {
+    margin-right: 75px;
+  }
+
+  &__icon {
+    margin-right: 17px;
+  }
+
+  &__text {
+    font-weight: $bold;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__price {
+    color: $header-text-secondary;
+    font-size: 12px;
+    margin: .5em 0 0 0;
+  }
+}

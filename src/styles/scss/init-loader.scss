@@ -1,0 +1,55 @@
+.init-loader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    text-align: center;
+  }
+
+  svg {
+    //width: 270px;
+    max-width: 60%;
+    animation: blink-animation 1s ease-in alternate infinite;
+  }
+
+  &__bar {
+    max-width: 80%;
+    margin: 50px auto 0;
+    background-color: #f4f4f4;
+    height: 9px;
+    border-radius: 3px;
+
+    &-complete {
+      height: 100%;
+      width: 0;
+      background-color: #007be8;
+      animation: load-bar 2s ease-in-out;
+    }
+  }
+}
+
+@keyframes load-bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1
+  }
+}

@@ -1,0 +1,39 @@
+.thumb {
+  min-height: 210px;
+  position: relative;
+
+  &__name {
+    color: $file-thumb-name;
+    font-size: 14px;
+    font-weight: $medium;
+    margin-bottom: .5em;
+  }
+
+  &__info {
+    color: $file-thumb-info;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  &__header {
+    position: relative;
+
+    &:hover {
+      .check {
+        display: inline-block;
+      }
+    }
+  }
+
+  .check {
+    position: absolute;
+    bottom: 14px;
+    right: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    cursor: pointer;
+  }
+
+}
