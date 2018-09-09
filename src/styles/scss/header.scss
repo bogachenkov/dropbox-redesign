@@ -4,6 +4,7 @@
   align-items: center;
   padding-right: 30px;
   justify-content: space-between;
+  transition: all .4s;
 
   @include minq('tablet') {
     justify-content: flex-start;
@@ -17,6 +18,7 @@
     justify-content: center;
     margin-right: 10px;
     flex: 0 0 80px;
+    transition: all .4s;
 
     @include minq('tablet') {
       width: 240px;

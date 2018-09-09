@@ -398,7 +398,8 @@ template {
   display: flex;
   align-items: center;
   padding-right: 30px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  transition: all .4s; }
   @media screen and (min-width: 48em) {
     .header {
       justify-content: flex-start; } }
@@ -409,7 +410,8 @@ template {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
-    flex: 0 0 80px; }
+    flex: 0 0 80px;
+    transition: all .4s; }
     @media screen and (min-width: 48em) {
       .header__logo {
         width: 240px;
@@ -646,7 +648,8 @@ template {
   outline: none;
   padding: 0 35px 0 15px;
   font-weight: 500;
-  font-style: italic; }
+  font-style: italic;
+  transition: all .4s; }
   @media screen and (min-width: 90em) {
     .search {
       width: 244px;

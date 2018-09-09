@@ -8,6 +8,7 @@
   padding: 0 35px 0 15px;
   font-weight: $medium;
   font-style: italic;
+  transition: all .4s;
 
   @include minq('desktop') {
     width: 244px;

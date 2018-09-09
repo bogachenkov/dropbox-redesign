@@ -103,7 +103,8 @@ export default function(state = initialState, action) {
     case DELETE_FILE:
       return {
         ...state,
-        files: [...state.files].filter(elem => elem.filename !== action.filename)
+        files: [...state.files].filter(elem => elem.filename !== action.filename),
+        selectedFiles: [...state.selectedFiles].filter(elem => elem !== action.filename),
       }
     case SELECT_FILE:
       return {

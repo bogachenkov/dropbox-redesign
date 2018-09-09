@@ -11,7 +11,7 @@ import Upgrade from './Upgrade';
 const Header = ({ darkTheme }) => {
   return (
     <header className={`header ${darkTheme ? 'dark' : 'light'}`}>
-      <a href="/" className="header__logo">
+      <a href="https://bogachenkov.github.io/dropbox-redesign/" className="header__logo">
         {darkTheme && <img src={whiteLogo} alt="Dropbox" />}
         {!darkTheme && <img src={blueLogo} alt="Dropbox" />}
       </a>
